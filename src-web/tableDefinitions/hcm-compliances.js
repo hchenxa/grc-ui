@@ -651,7 +651,15 @@ export function getDecisionList(policy, locale) {
                     key={`${cluster}-link`}
                     color={color}
                     variant='outline'
-                    href={href}
+                    render={({
+                        className,
+                        content,
+                        componentRef
+                      })=>
+                        <Link to={href} className={className} innerRef={componentRef}>
+                        {content}
+                      </Link>
+                    }
                   >
                     {cluster}
                   </Label>
