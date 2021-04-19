@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PolicyDetailsOverview component logs an error with more than one policy 1`] = `"Only one policy was expected but 2 were received. The other policies will be ignored."`;
+
 exports[`PolicyDetailsOverview component renders as normal 1`] = `
 <div
   className="overview-content"
@@ -561,6 +563,29 @@ exports[`PolicyDetailsOverview component renders as normal 1`] = `
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PolicyDetailsOverview component renders no resource 1`] = `
+<div>
+  <div
+    className="no-resource"
+  >
+    <img
+      alt="No resource"
+      className="no-resource-icon"
+      src="undefined/graphics/EmptyPagePlanet-illus.png"
+    />
+    <div
+      className="no-resource-text-info"
+    >
+      <div
+        className="no-resource-title"
+      >
+        Resource not found
       </div>
     </div>
   </div>
