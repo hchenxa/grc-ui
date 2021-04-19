@@ -546,11 +546,13 @@ exports[`PolicyDetailsOverview component renders as normal 1`] = `
                               <span
                                 className="pf-c-label pf-m-outline"
                               >
-                                <span
+                                <a
                                   className="pf-c-label__content"
+                                  href="/"
+                                  onClick={[Function]}
                                 >
                                   calamari
-                                </span>
+                                </a>
                               </span>
                             </span>
                           </li>
