@@ -27,37 +27,6 @@ exports[`hcm-compliances - createPolicyLink should return valid policy link 1`] 
 />
 `;
 
-exports[`hcm-compliances - formLinkToCluster should get -  1`] = `"-"`;
-
-exports[`hcm-compliances - formLinkToCluster should get -  2`] = `"-"`;
-
-exports[`hcm-compliances - formLinkToCluster should get RedHat  1`] = `"RedHat"`;
-
-exports[`hcm-compliances - formLinkToCluster should get formLinkToCluster 1`] = `
-<a
-  href="/multicloud/clusters"
-  rel="noopener noreferrer"
-  target="_blank"
->
-  RedHat
-</a>
-`;
-
-exports[`hcm-compliances - formMessageLink should get -  1`] = `"-"`;
-
-exports[`hcm-compliances - formMessageLink should get -  2`] = `"-"`;
-
-exports[`hcm-compliances - formMessageLink should get message view details link 1`] = `
-<div>
-  NonCompliant; violation - k8srequiredlabels \`ns-must-have-gk\` does not exist as specified, and should be created 
-  <Link
-    to="undefined/all/default/policy-gatekeeper/template/calamari/policy.open-cluster-management.io/v1/ConfigurationPolicy/policy-gatekeeper-audit"
-  >
-    View details
-  </Link>
-</div>
-`;
-
 exports[`hcm-compliances - formatAnnotationString should get "-"  1`] = `"-"`;
 
 exports[`hcm-compliances - formatAnnotationString should get "-"  2`] = `"-"`;

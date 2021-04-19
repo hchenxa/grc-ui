@@ -24,8 +24,6 @@ import {
   getDecisionCount,
   getSubjects,
   formatAnnotationString,
-  formLinkToCluster,
-  formMessageLink,
 } from '../../../src-web/tableDefinitions/hcm-compliances'
 
 describe('hcm-compliances - createComplianceLink', () => {
@@ -237,49 +235,5 @@ describe('hcm-compliances - formatAnnotationString', () => {
   it('should get "-" ', () => {
     const item = null
     expect(formatAnnotationString(item)).toMatchSnapshot()
-  })
-})
-
-describe('hcm-compliances - formLinkToCluster', () => {
-  it('should get formLinkToCluster', () => {
-    const item = {cluster:'RedHat', consoleURL:'/multicloud/clusters'}
-    expect(formLinkToCluster(item)).toMatchSnapshot()
-  })
-  it('should get RedHat ', () => {
-    const item = {cluster:'RedHat', consoleURL:''}
-    expect(formLinkToCluster(item)).toMatchSnapshot()
-  })
-  it('should get - ', () => {
-    const item = {cluster:'', consoleURL:'/multicloud/clusters'}
-    expect(formLinkToCluster(item)).toMatchSnapshot()
-  })
-  it('should get - ', () => {
-    const item = null
-    expect(formLinkToCluster(item)).toMatchSnapshot()
-  })
-})
-
-describe('hcm-compliances - formMessageLink', () => {
-  it('should get message view details link', () => {
-    const item = {
-      apiVersion: 'policy.open-cluster-management.io/v1',
-      cluster: 'calamari',
-      consoleURL: 'https://console-openshift-console.apps.calamari.dev08.red-chesterfield.com',
-      kind: 'ConfigurationPolicy',
-      message: 'NonCompliant; violation - k8srequiredlabels `ns-must-have-gk` does not exist as specified, and should be created',
-      name: 'policy-gatekeeper-audit',
-      policyName: 'policy-gatekeeper',
-      policyNamespace: 'default',
-      timestamp: '2020-08-20T08:39:17Z',
-    }
-    expect(formMessageLink(item, 'en-US')).toMatchSnapshot()
-  })
-  it('should get - ', () => {
-    const item = {message:''}
-    expect(formMessageLink(item, 'en-US')).toMatchSnapshot()
-  })
-  it('should get - ', () => {
-    const item = null
-    expect(formMessageLink(item, 'en-US')).toMatchSnapshot()
   })
 })
